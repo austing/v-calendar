@@ -22,8 +22,8 @@
       </div>
       <!--Header title-->
       <div
-        :class='["c-title-layout", titleClass]'>   
-        <!--Navigation popover--> 
+        :class='["c-title-layout", titleClass]'>
+        <!--Navigation popover-->
         <popover
           class='c-title-popover'
           direction='bottom'
@@ -126,6 +126,7 @@
         :prev-month-comps='p.prevMonthComps'
         :next-month-comps='p.nextMonthComps'
         :styles='styles'
+        :prices='prices'
         :formats='formats'
         v-bind='$attrs'
         @touchstart.passive='touchStart($event)'
@@ -184,6 +185,7 @@ export default {
     paneWidth: Number,
     hideLeftButton: Boolean,
     hideRightButton: Boolean,
+    prices: Object,
   },
   data() {
     return {

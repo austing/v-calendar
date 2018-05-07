@@ -1,5 +1,5 @@
 <template>
-<div> 
+<div>
   <div
     class='c-week'
     v-for='(week, i) in weeks'
@@ -11,6 +11,7 @@
       v-for='day in week'
       :key='day.id'
       :day='day'
+      :prices='prices'
       v-bind='$attrs'
       v-on='$listeners'>
       <template v-for='slot in Object.keys($scopedSlots)' :slot='slot' slot-scope='props'>

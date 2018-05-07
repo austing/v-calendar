@@ -36,7 +36,7 @@
       @mouseover='mouseover'
       @mouseleave='mouseleave'>
       <slot
-        name='day-content' 
+        name='day-content'
         :day='day'
         :content-style='contentStyle'
         :attributes='attributesList'>
@@ -45,6 +45,10 @@
           :style='contentStyle'>
           <div>
             {{ day.label }}
+            <div v-if="day.price">
+              {{ price }}
+              {{ prices }}
+            </div>
           </div>
         </div>
       </slot>
@@ -149,6 +153,7 @@ export default {
     popoverContentOffset: { type: Number, default: 7 },
     styles: Object,
     formats: Object,
+    prices: Object,
   },
   data() {
     return {
@@ -158,6 +163,10 @@ export default {
     };
   },
   computed: {
+    price () {
+      if (!this.prices) return
+      if (this.prices[this.day.dateTime]) return this.prices[this.day.dateTime]
+    },
     label() {
       return this.day.label;
     },

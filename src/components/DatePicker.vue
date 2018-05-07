@@ -31,6 +31,7 @@ export default {
           fromPage: this.fromPage_,
           toPage: this.toPage_,
           themeStyles: this.themeStyles_,
+          prices: this.prices
         },
         on: this.mergeListeners(
           {
@@ -148,6 +149,7 @@ export default {
     fromPage: Object,
     toPage: Object,
     themeStyles: { type: Object, default: () => ({}) }, // Resolved by computed property
+    prices: Object,
   },
   data() {
     return {

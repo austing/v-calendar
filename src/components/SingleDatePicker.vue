@@ -10,6 +10,7 @@ export default {
       attrs: {
         ...this.$attrs,
         attributes: this.attributes_,
+        prices: this.prices,
       },
       on: this.mergeListeners({
         dayclick: this.clickDay,
@@ -27,6 +28,7 @@ export default {
     selectAttribute: Object,
     disabledAttribute: Object,
     attributes: Array,
+    prices: Object,
   },
   computed: {
     selectAttribute_() {

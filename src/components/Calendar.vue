@@ -40,6 +40,7 @@ export default {
           styles: this.themeStyles_,
           attributes: this.attributes_,
           formats: this.formats_,
+          prices: this.prices,
         },
         on: this.mergeListeners({
           'update:page': val => {
@@ -96,6 +97,7 @@ export default {
     themeStyles: Object,
     attributes: Array,
     formats: Object,
+    prices: Object,
   },
   data() {
     return {
